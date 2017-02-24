@@ -19,8 +19,21 @@ body {}
 		color: $text-color;
 	}
 }
+.m-t-20 {
+	margin-top: 20px;
+}
+.m-t-40 {
+	margin-top: 40px;
+}
+.m-t-0 {
+	margin-top: 0;
+}
 .m-b-0 {
 	margin-bottom: 0;
+}
+.m-a {
+	margin-left: auto;
+	margin-right: auto;
 }
 .form-row {
 	@include make-row(10px);
@@ -34,4 +47,20 @@ label {
 .btn {
 	font-weight: 300;
 	letter-spacing: .5px;
+}
+.frame {
+	padding: 2px;
+	border: 1px solid $brand-primary-alt;
+}
+.bio {
+	margin-bottom: 20px;
+	text-align: center;
+	img {
+		@extend .img-thumbnail;
+		@extend .img-circle;
+		height: 150px;
+		width: 150px;
+		display: block;
+		margin: 0 auto 15px;
+	}
 }

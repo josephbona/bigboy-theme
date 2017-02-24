@@ -36,9 +36,9 @@ get_header(); ?>
       </div>
     </div>
     <div class="col-md-7 col-md-pull-5 text-center">
-      <h3 class="m-b-0">Available Markets Throughout The Country</h3>
-      <p>Discover A Great Opportunity Near You! <a class="text-link" href="markets.html">Click Here.</a></p>
-      <a href="markets.html"><img src="<?php bloginfo('template_directory'); ?>/dist/images/map.jpg" alt="" class="img-responsive"></a>
+      <h3 class="m-b-0 m-t-40">Available Markets Throughout The Country</h3>
+      <p>Discover A Great Opportunity Near You! <a class="text-link" href="<?php echo get_page_link(27); ?>">Click Here.</a></p>
+      <a href="<?php echo get_page_link(27); ?>"><img src="<?php bloginfo('template_directory'); ?>/dist/images/map.jpg" alt="" class="img-responsive"></a>
     </div>
 	<?php
 	do_action('wpstarter_after_content');

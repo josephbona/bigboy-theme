@@ -17,6 +17,7 @@ if ($next_section['id']) :
     <h4>Continue To Next Section:</h4>
     <p>
       <a href="<?php echo get_page_link($next_section['id']); ?>" class="btn btn-primary"><?php echo $next_section['title']; ?></a>
+      <!-- <a href="<?php echo get_page_link(29); ?>" class="btn btn-primary">Apply Now!</a> -->
     </p>
   </div>
 </div>

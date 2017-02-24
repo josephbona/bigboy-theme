@@ -48,3 +48,17 @@
 		}
 	}
 }
+
+.half-list {
+	@include clearfix();
+
+	li {
+		width: 50%;
+		float: left;
+
+		@include max-width(767px) {
+			width: 100%;
+			float: none;
+		}
+	}
+}
