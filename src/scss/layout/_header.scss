@@ -1,0 +1,66 @@
+.site-header {
+  @include clearfix();
+  padding: 10px 0;
+  position: relative;
+  .logo {
+    display: block;
+    background-color: #fff;
+    padding-right: 10px;
+    text-align: center;
+    img {
+      height: 80px;
+    }
+    @include min-width($grid-float-breakpoint) {
+      float: left;
+      img {
+        height: 100px;
+      }
+    }
+    @include min-width(1100px) {
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+.header-top {
+  @include clearfix();
+  border-bottom: 1px solid $brand-primary;
+  text-align: center;
+  font-family: $headings-font-family;
+  margin-top: 15px;
+  @include min-width($grid-float-breakpoint) {
+    float: right;
+    text-align: right;
+  }
+  @include min-width(1100px) {
+    height: 40px;
+    float: none;
+    margin-top: 0;
+  }
+  .list-inline {
+    margin-bottom: 0;
+    a {
+      line-height: 40px;
+    }
+    @include min-width(1100px) {
+      float: right;
+    }
+  }
+  .cta {
+    font-size: 20px;
+    margin-left: 15px;
+    a {
+      font-size: 25px;
+      display: block;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+      @include min-width($grid-float-breakpoint) {
+        display: inline;
+      }
+    }
+    @include min-width(1100px) {
+      float: right;
+    }
+  }
+}

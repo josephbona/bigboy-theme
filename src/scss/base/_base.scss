@@ -1,0 +1,37 @@
+body {}
+.container-fluid {
+	max-width: 1170px;
+}
+.show-on-hover {
+	@include max-width($grid-float-breakpoint-max) {
+		&:not(.open)>.dropdown-menu, &:not(.open):hover>.dropdown-menu {
+			display: none;
+		}
+	}
+	&:hover>.dropdown-menu {
+		display: block;
+	}
+}
+.text-link {
+	text-decoration: underline;
+	color: $text-color;
+	&:hover, &:focus {
+		color: $text-color;
+	}
+}
+.m-b-0 {
+	margin-bottom: 0;
+}
+.form-row {
+	@include make-row(10px);
+}
+.form-col {
+	@include make-sm-column(6, 10px);
+}
+label {
+	font-weight: normal;
+}
+.btn {
+	font-weight: 300;
+	letter-spacing: .5px;
+}

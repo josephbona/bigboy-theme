@@ -1,0 +1,20 @@
+{
+  "name": "bigboy",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.1",
+    "slick-carousel": "^1.6.0",
+    "raphael": "^2.2.7",
+    "usmap.js": "USMap#^1.0.3"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  }
+}

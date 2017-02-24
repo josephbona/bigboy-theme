@@ -1,0 +1,25 @@
+$icon-font-path: '../fonts/';
+@import 'base/reset';
+@import 'utils/variables';
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/slick-carousel/slick/slick.scss";
+// endbower
+@import 'utils/mixins';
+
+@import 'base/base';
+@import 'base/fontstack';
+@import 'base/typography';
+@import 'base/no-gutters';
+@import 'base/wordpress';
+
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/hero';
+@import 'layout/footer';
+
+@import 'modules/widget-apply';
+@import 'modules/map';
+
+@import 'pages/home';
+@import 'pages/page';

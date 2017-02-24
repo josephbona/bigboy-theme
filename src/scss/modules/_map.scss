@@ -1,0 +1,42 @@
+.market-map {
+  margin-top: 50px;
+  .panel {
+    max-width: 300px;
+    margin: 0 auto 50px;
+    @include min-width($screen-sm-min) {
+      margin-bottom: 0;
+    }
+  }
+  h4 {
+    color: $gray-dark;
+    font-size: 18px;
+    b {
+      display: inline-block;
+      margin-right: 5px;
+      width: 14px;
+      height: 14px;
+      background-color: $brand-primary-alt;
+      &.primary {
+        background-color: $brand-primary;
+      }
+    }
+  }
+  .check-list {
+    li:before {
+      font-size: 12px;
+    }
+  }
+  .map {
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    @include min-width($screen-sm-min) {
+      width: 500px;
+      height: 400px;
+    }
+    @include min-width($screen-md-min) {
+      width: 700px;
+      height: 571px;
+    }
+  }
+}

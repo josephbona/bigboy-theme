@@ -1,0 +1,41 @@
+.widget-apply {
+  margin-bottom: 20px;
+  background-image: url(../images/widget-apply.jpg);
+  background-size: cover;
+  background-position: top center;
+  @include min-width($screen-sm-min) {
+    margin-top: 0;
+  }
+  .widget-inner {
+    background: rgba($brand-secondary, 0.80);
+    padding: 1em;
+  }
+  .widget-title {
+    color: #fff;
+    margin: 0 0 5px;
+  }
+  p {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: .5px;
+  }
+  .lined {
+    &:before,
+    &:after {
+      border-color: rgba(#fff, .30);
+    }
+  }
+  form {
+    padding: 1em;
+    border: 4px double $brand-secondary;
+    background: #fff;
+    label {
+      font-size: 14px;
+      color: $brand-primary-alt;
+    }
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+}

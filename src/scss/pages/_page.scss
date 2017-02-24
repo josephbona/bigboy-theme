@@ -1,0 +1,57 @@
+.page-banner {
+  background: $brand-primary;
+  padding: 15px;
+  color: white;
+  margin-top: 20px;
+  @include min-width($screen-sm-min) {
+    background: url(../images/page-banner.png) no-repeat $brand-primary;
+    background-position: 95% 50%;
+  }
+  .title {
+    margin-top: 0;
+    color: white;
+    font-weight: normal;
+  }
+  p {
+    color: white;
+    font-weight: 300;
+    letter-spacing: .5px;
+  }
+  .list-inline {
+    margin-top: 40px;
+    margin-bottom: 0;
+    li {
+      position: relative;
+      padding-right: 10px;
+      &:first-child {
+        display: block;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      &:after {
+        content: '';
+        width: 1px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        background-color: rgba(#fff, 0.50);
+        @include center(y);
+      }
+      &:first-child,
+      &:last-child {
+        &:after {
+          content: none;
+        }
+      }
+      a {
+        color: white;
+      }
+      &.current_page_item {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
