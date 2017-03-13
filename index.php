@@ -11,51 +11,27 @@
  *
  * @package wpstarter
  */
-
-get_header(); ?>
-
-	<div class="container">
-		<div class="row">
-			<main class="col-sm-8">
-
-			<?php
-			if ( have_posts() ) :
-
-				if ( is_home() && ! is_front_page() ) : ?>
-					<header>
-						<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-					</header>
-
-				<?php
-				endif;
-
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
-
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
-
-				endwhile;
-
-				bootstrap_breadcrumbs();
-
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-
-			endif; ?>
-
-			</main>
-			<div class="col-sm-4">
-				<?php get_sidebar(); ?>
-			</div>
-		</div>
-		<!-- #main -->
-	</div><!-- #primary -->
-
+get_header();
+if ( have_posts() ) : ?>
+<header class="page-header">
+	<?php single_post_title( '<h1 class="page-title">', '</h1>' ); ?>
+</header>
+<?php do_action('wpstarter_before_content'); ?>
+<div class="col-md-8 col-sm-6">
 <?php
+	while ( have_posts() ) : the_post();
+		get_template_part( 'template-parts/content', 'archive' );
+	endwhile;
+
+	the_posts_navigation();
+
+else :
+
+	get_template_part( 'template-parts/content', 'none' );
+
+endif; ?>
+</div>
+<?php
+get_sidebar('page');
+do_action('wpstarter_after_content');
 get_footer();

@@ -13,6 +13,37 @@
 		text-align: center;
 	}
 }
+.entry-footer,
+.entry-meta {
+	margin: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 10px;
+	border: 1px solid $gray-lighter;
+	border-left: none;
+	border-right: none;
+	font-size: 14px;
+	i {
+		margin-right: 8px;
+	}
+	a {
+		color: $brand-primary;
+	}
+	.cat-links,
+	.tags-links {
+		margin-right: 8px;
+	}
+}
+.archive-post {
+	&+ .archive-post {
+		margin-top: 15px;
+		padding-top: 15px;
+		border-top: 1px solid $gray-lighter;
+	}
+	.entry-summary {
+		padding: 0 10px;
+	}
+}
 .alignleft, img.alignleft {
 	float: left;
 	margin-right: .5em;
